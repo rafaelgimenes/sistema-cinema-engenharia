@@ -1,0 +1,19 @@
+@startuml
+left to right direction
+actor "Espectador" as E
+actor "Funcionário" as F
+actor "Administrador" as A
+
+package "Sistema de Cinema" {
+  usecase "Consultar Filmes" as UC1
+  usecase "Comprar Ticket" as UC2
+  usecase "Agendar Sessões" as UC3
+  usecase "Relatório de Público" as UC4
+}
+
+E --> UC1
+E --> UC2
+F --> UC3
+A --> UC4
+F <|-- A
+@enduml
