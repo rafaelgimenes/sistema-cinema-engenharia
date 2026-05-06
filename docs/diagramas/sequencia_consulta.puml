@@ -1,0 +1,19 @@
+@startuml
+actor Espectador
+participant "FilmeView" as V
+participant "FilmeController" as C
+participant "FilmeService" as S
+participant "FilmeRepository" as R
+database "SQLite" as DB
+
+Espectador -> V: acessar lista de filmes
+V -> C: listarFilmes()
+C -> S: validarRegrasEConsultar()
+S -> R: buscarNoBanco()
+R -> DB: SELECT * FROM filmes
+DB --> R: dados brutos
+R --> S: lista de objetos
+S --> C: lista processada
+C --> V: renderizar pagina
+V --> Espectador: mostra filmes em cartaz
+@enduml
