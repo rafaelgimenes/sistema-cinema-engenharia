@@ -1,0 +1,35 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide circle
+
+class Cinema {
+  +id: int
+  +nome: String
+  +cidade: String
+  +capacidadeTotal: int
+}
+
+class Filme {
+  +id: int
+  +titulo: String
+  +genero: String
+  +duracao: int
+}
+
+class Sessao {
+  +id: int
+  +dataHora: DateTime
+  +valorIngresso: float
+  +vagasDisponiveis: int
+}
+
+class Ingresso {
+  +id: int
+  +dataCompra: DateTime
+  +tipoIngresso: String
+}
+
+Cinema "1" *-- "0..*" Sessao
+Filme "1" -- "0..*" Sessao
+Sessao "1" *-- "0..*" Ingresso
+@enduml
