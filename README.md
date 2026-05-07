@@ -3,11 +3,16 @@
 Projeto enxuto para a aula de Engenharia de Software.
 
 ## 🚀 Requisitos e Regras
-- **RF01:** Consultar filmes e sessões.
-- **RF02:** Comprar ingressos.
-- **RF03:** Cadastro de filmes/sessões (Funcionário).
-- **RN01:** Intervalo de 20min entre sessões.
-- **RN02:** Respeitar capacidade máxima da sala.
+- **RF01:** Consultar filmes em cartaz e detalhes das sessões.
+- **RF02:** Realizar a compra de ingressos (Tickets) pelo espectador.
+- **RF03:** Manter cadastros de filmes, salas e cinemas (Funcionário).
+- **RF04:** Gerenciar agendamento de sessões e horários (Funcionário).
+- **RF05:** Gerar relatórios de público e faturamento (Administrador).
+- **RN01:** Intervalo de 20min entre sessões na mesma sala para limpeza.
+- **RN02:** Respeitar capacidade máxima da sala (bloqueio de venda).
+- **RN03:** Verificação de classificação indicativa conforme idade do espectador.
+- **RN04:** Proibição de choque de horários (duas sessões na mesma sala).
+- **RN05:** Registro obrigatório de logs de vendas para auditoria diária.
 
 ## 📊 Diagramas do Sistema
 
